@@ -3,6 +3,7 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 
 html, body{
@@ -11,13 +12,20 @@ html, body{
     font-size: 20px;
     margin: 0;
     padding: 0;
-    
+    background: rgb(16, 102, 117);
     width: 100vw;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+body{
+    position: relative;
+    top: 1.5rem;
+   
+}
+
+h1, h2, h3, h4, h5, h6, p, address {
     color: black;
 }
+
 
 
 
@@ -25,48 +33,270 @@ h1, h2, h3, h4, h5, h6, p {
 
 header {
     position: fixed;
+    z-index: 5;
     top: 0;
     margin: 0;
-    padding: 0 3rem;
+    padding: 5px 3rem;
     background-color: #FEA43D;
+
+    box-shadow: 2px 2px 5px;
+    
     
     width: 100vw;
-    height: 4rem;
+    height: 2.5rem;
     
 
     display: flex;
     align-items: center;
    
-
+    
+    animation-name: header-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;  
 }
 
+@keyframes header-in {
+    0% {transform: translateY(-50px)}
+    100% {transform: translateY(0)}
+}
+
+/* Logo */
 
 .site-logo-link {
     margin-right: auto;
+    text-decoration: none;
+    font-size: 1.75rem;
+}
+
+.logo{
+    
+    transition-property: transform;
+    transition-duration: 1s;
+    }
+.logo:hover{
+    transform: rotate(360deg);
+}
+
+.logo-text{
+    color: rgb(16, 102, 117);
 }
 
 nav {
-    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#hamburger {
+    display: none;
+    font-size: 1.5rem;
+    border: none;
+    background: transparent;
+    color: white;
+    margin-left: 0;
+    align-self: center;
 }
 
 nav a {
     color:white;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1rem;
+    flex-grow: 0;
     
+    transition: color 1s;
+}
+
+nav a:hover {
+    color: rgb(16, 102, 117);
 }
 
 nav li {
     display: inline-block;
+    flex-grow: 0;
     
 }
 
 
-body{
-    position: relative;
-    top: 4rem;
+
+/*Banner with intro message*/
+#banner {
+    height: 80vh;
+    text-align: center;
+    background: rgb(16, 102, 117);
+    z-index: -1;
+    padding: 0;
+    
 }
+
+#intro-message {
+    position: relative;
+    color: white;
+    opacity: 0;
+    top: 40%;
+    animation: appear 2s ease 2s forwards;
+   
+    
+}
+
+.blur{
+    filter:blur(2px);
+}
+
+#intro-message > h1{
+    margin: 1rem;
+    color: white;
+    font-size: 3rem;
+}
+
+@keyframes appear{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+/* About Section */
+
+
+
+#about-services{
+    padding: 0 15%;
+    width: 100%;
+    min-height: 40vh;
+    margin: auto;
+    background: white;
+    height: 80vh;
+}
+
+#hello{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#hello > h2{
+    font-size: 2rem;
+}
+
+.about{
+    padding: 2rem 0;
+}
+
+/* Projects Section */
+#portfolio{
+    padding: 3rem 15%;
+    width: 100%;
+    min-height: 80vh;
+    background:rgb(16, 102, 117)
+}
+
+#portfolio > h2 {
+    color: white;
+}
+
+.container{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.project-container{
+    background-color: #FEA43D;
+    width: 450px;
+    height: 400px;
+    padding: 5%;
+    margin: 20px;
+    transition-property: background-color, transform;
+    transition-duration: .75s;
+    box-shadow: 2px 2px 5px;
+}
+
+.project-container:hover{
+    background-color: #ff971f;
+    transform: translateY(-10px);
+}
+
+/* Contact Info */
+#contact{
+    padding: 3rem 15%;
+    width: 100%;
+    height: 40vh;
+    background: white;
+}
+
+address{
+    font-style: normal;
+    text-decoration: none;
+}
+
+/* Small Screens */
+
+
+
+@media only screen and (max-width: 768px) {
+
+    #nav-bar {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+
+            
+    }
+
+    header.slide{
+        min-height: 2.5rem;
+        height: 15rem;
+        transition: height, 0.5s;
+    }
+
+    
+
+  
+    nav {
+        justify-content: center;
+        width: 100%;
+    }
+    
+
+    #nav-bar.show{
+        display: flex;
+        width: 100%;
+        padding: 0;
+
+    }
+
+  
+        
+  
+
+    #hamburger {
+        display: block;
+        margin-left: auto;
+        
+    }
+
+    nav li {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+       
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    .logo.hide {
+        display: none;
+    }
+}
+    
+
+
+
+
 
 
 

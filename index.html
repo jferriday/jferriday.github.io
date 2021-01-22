@@ -3,19 +3,24 @@
     <head>
         <title>Josh Ferriday</title>
         <link rel="stylesheet" type="text/css" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/7eacef5a75.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <header>
+        <header id="header">
             
                     <a class="site-logo-link" href="index.html">
-                        <div class="logo">
+                        <div id="mainlogo" class="logo">
                             <span class="logo-text">JF</span>
                         </div>
                     </a>
                 
                 <nav>
-                    <ul class="nav-list" role="navigation">
+                    <button id="hamburger">
+                        <i   class="fas fa-bars"></i>
+                    </button>
+                    <ul id="nav-bar"class="nav-list" role="navigation">
                         <li><a href="#">Home</a></li> 
                         <li><a href="#">Projects</a></li>
                         <li><a href="#">Contact</a></li>
@@ -27,16 +32,24 @@
         <main>
             <section id="intro-banner">
                 <div id="banner">
-                    <h1>Hello, my name is Josh Ferriday.</h1>
-                    <span class="tagline">I'm a front-end web develop based in Leeds, UK.</span>
+                    <div id="intro-message">
+                        <h1 id="intro-text">Hello, my name is Josh Ferriday.</h1>
+                        <span class="tagline">I'm a front-end web developer based in Leeds, UK.</span>
+                        <!--Interactive balls-->
+                        <div class="ball" id="1"></div>
+                        <div class="ball" id="2"></div>
+                    </div>
                 </div>
             </section>
 
             <section id="about-services">
-                <h2>About</h2>
-                <p>I build websites with a focus on simplicity and user experience. See my portfolio 
+                <div id="hello"><h2 id="sayhello">Say hello...</h2></div>
+                <div class="about">
+                    <h2>About</h2>
+                    <p>I build websites with a focus on simplicity and user experience. See my portfolio 
                     below for past work, or <a href="mailto:josh.ferriday@gmail.com">contact me</a> for more information.</p>
-            </section>
+                </div>
+                </section>
 
             <section id="portfolio">
                 <h2>Projects</h2>
@@ -46,16 +59,24 @@
                         <h3>Project Name</h3>
                         <p>Project Description</p>
                     </div>
+
+                    <div class="project-container">
+                        <div class="project-image"></div>
+                        <h3>Project Name</h3>
+                        <p>Project Description</p>
+                    </div>
+
                 </div>
             </section>
 
             <section id="contact">
                 <h2>Contact</h2>
-                <address><a href="mailto:josh.ferriday@gmail.com">Email: josh.ferriday@gmail.com</a></address>
+                <br>
+                <address><a href="mailto:josh.ferriday@gmail.com">josh.ferriday@gmail.com</a></address>
             </section>
 
         </main>
 
-        </header>
+        <script src="./main.js"></script>
     </body>
 </html>
