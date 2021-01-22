@@ -52,7 +52,8 @@ header {
     
     animation-name: header-in;
     animation-duration: 1s;
-    animation-fill-mode: forwards;  
+    animation-fill-mode: forwards;
+    transition: height, 0.25s;  
 }
 
 @keyframes header-in {
@@ -247,7 +248,7 @@ address{
     header.slide{
         min-height: 2.5rem;
         height: 15rem;
-        transition: height, 0.5s;
+        transition: height, 0.25s;
     }
 
     
@@ -256,6 +257,7 @@ address{
     nav {
         justify-content: center;
         width: 100%;
+        
     }
     
 
@@ -264,8 +266,9 @@ address{
         width: 100%;
         padding: 0;
 
-    }
 
+    }
+    
   
         
   
@@ -274,6 +277,10 @@ address{
         display: block;
         margin-left: auto;
         
+    }
+
+    #hamburger:focus {
+        outline: none;
     }
 
     nav li {
