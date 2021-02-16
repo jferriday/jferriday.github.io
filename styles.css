@@ -222,6 +222,13 @@ nav li {
     transform: translateY(-10px);
 }
 
+.project-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+
+}
+
 /* Contact Info */
 #contact{
     padding: 3rem 15%;
