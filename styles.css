@@ -209,7 +209,7 @@ nav li {
 .project-container{
     background-color: #FEA43D;
     width: 450px;
-    height: 400px;
+    min-height: 400px;
     padding: 5%;
     margin: 20px;
     transition-property: background-color, transform;
