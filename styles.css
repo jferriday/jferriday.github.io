@@ -207,6 +207,7 @@ nav li {
 }
 
 .project-container{
+    border-radius: 2px;
     background-color: #FEA43D;
     width: 450px;
     min-height: 400px;
@@ -223,6 +224,7 @@ nav li {
 }
 
 .project-image img {
+    border-radius: 2px;
     width: 100%;
     height: auto;
     opacity: 0.9;
