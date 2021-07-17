@@ -84,6 +84,10 @@ header {
     color: rgb(16, 102, 117);
 }
 
+.tagline a {
+    color: white;
+}
+
 nav {
     display: flex;
     flex-wrap: wrap;
